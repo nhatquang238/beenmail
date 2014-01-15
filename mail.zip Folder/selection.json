@@ -1,0 +1,134 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M602.88 613.786v223.078l369.92-342.528-369.92-330.496v197.939c-449.28 0-551.68 498.381-551.68 498.381 127.13-224.768 307.814-246.374 551.68-246.374z"
+				],
+				"tags": [
+					"forward",
+					"arrow",
+					"right"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"order": 1,
+				"id": 13,
+				"prevSize": 20,
+				"code": 58880,
+				"name": "forward",
+				"ligatures": ""
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M369.92 301.056v-137.216l-369.92 330.496 369.92 342.579v-142.285l-216.32-200.294 216.32-193.28zM625.92 361.779v-197.939l-369.92 330.496 369.92 342.579v-223.13c168.602 0 270.95 21.606 398.080 246.374 0 0-18.79-498.381-398.080-498.381z"
+				],
+				"tags": [
+					"reply-all",
+					"first",
+					"arrow",
+					"left"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"order": 2,
+				"id": 12,
+				"prevSize": 20,
+				"code": 58881,
+				"name": "reply-all",
+				"ligatures": ""
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M972.8 860.16c0 0-102.4-498.33-551.68-498.33v-197.99l-369.92 330.496 369.92 342.579v-223.13c243.866 0 424.55 21.606 551.68 246.374z"
+				],
+				"tags": [
+					"reply",
+					"undo",
+					"arrow",
+					"left",
+					"back",
+					"previous"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"order": 3,
+				"id": 11,
+				"prevSize": 20,
+				"code": 58882,
+				"name": "reply",
+				"ligatures": ""
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M734.669 673.382l-141.21-161.382 141.21-161.382c24.013-24.013 24.013-62.925 0-86.886-24.013-23.962-62.925-23.962-86.886 0l-135.782 155.187-135.731-155.136c-24.013-24.013-62.925-24.013-86.886 0-23.962 24.013-23.962 62.925 0 86.886l141.158 161.331-141.21 161.382c-23.962 24.013-23.962 62.822 0 86.784 24.013 24.013 62.925 24.013 86.886 0l135.782-155.085 135.731 155.085c24.013 24.013 62.925 24.013 86.886 0s24.013-62.771 0.051-86.784z"
+				],
+				"tags": [
+					"cross",
+					"cancel",
+					"close",
+					"remove",
+					"delete"
+				],
+				"grid": 20
+			},
+			"properties": {
+				"order": 4,
+				"id": 121,
+				"prevSize": 20,
+				"code": 58883,
+				"name": "cross",
+				"ligatures": ""
+			}
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "mail"
+	},
+	"preferences": {
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "mail"
+			},
+			"showGlyphs": true,
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880,
+			"showQuickUse": true,
+			"quickUsageToken": false,
+			"showMetrics": true,
+			"showMetadata": true,
+			"ie7": true
+		},
+		"imagePref": {
+			"color": 0,
+			"height": 48,
+			"columns": 16,
+			"margin": 16,
+			"png": false,
+			"sprites": false
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16,
+		"showLiga": false,
+		"showGrid": true,
+		"showGlyphs": true,
+		"showQuickUse": true
+	}
+}

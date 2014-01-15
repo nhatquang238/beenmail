@@ -1,0 +1,294 @@
+@import 'sass-bootstrap/lib/bootstrap';
+html {
+    background: black;
+}
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+$green-bs: #2FA65C;
+
+.beenmail {
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    padding: 0 15px;
+}
+
+input.search-mail {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    height: auto;
+}
+
+.control-btn {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.message-preview {
+    background: #fefefe;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    top: -1px;
+    transition: all 0.3s ease-out;
+
+    &:first-of-type {
+        top: 0;
+    }
+    &:last-of-type {
+        border-bottom: 1px solid #eee;
+    }
+
+    &.active {
+        background: $green-bs;
+        color: #f2f2f2;
+    }
+    &:not(.active):hover {
+        background: #C2F3C2;
+    }
+    & h3 {
+        font-size: 1em;
+        line-height: 1.2em;
+        padding: 1.2em 0;
+        margin: 0;
+    }
+    & p {
+        margin-bottom: 1.2em;
+    }
+}
+
+.new{
+    &:before, &.active:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        bottom: 40%;
+        right: 20px;
+    }
+    &.active:before{
+        background: #f5f5f5;
+    }
+    &:before {
+        background: $green-bs;
+    }
+}
+
+.delete, .delete-message {
+    position: absolute;
+    display: none;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.delete {
+    bottom: 35%;
+    right: 5px;
+}
+
+.message-preview:hover .delete {
+    display: block;
+    cursor: pointer;
+}
+
+.message {
+    background: #fff;
+    padding: 15px 15px 30px;
+    border: 1px solid #ccc;
+    // border-radius: 4px;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    & p {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-bottom: 0;
+    }
+
+    &:hover .delete-message, &:hover .mail-action{
+        display: block;
+    }
+}
+
+.mail-head {
+    padding-bottom: 1.5em;
+    position: relative;
+}
+
+.sender, .receiver {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: #e5e5ee;
+}
+
+.beenmail-link {
+    position: relative;
+}
+
+.notification {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+
+.delete-message {
+    cursor: pointer;
+    bottom: 50%;
+    right: 0;
+    font-size: 1.2em;
+}
+
+// mail-action
+
+.mail-action {
+    font-size: 1.2em;
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 37%;
+
+    & span {
+        padding: 0.2em 0.3em;
+        background: #ccc;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+    & span:hover {
+        background: $green-bs;
+        color: white;
+    }
+}
+
+// New message
+.new-message {
+    padding-bottom: 1em;
+    transition: all 0.3s ease-out;
+    transform: scale(1.02);
+}
+
+.message-content {
+    width: 96%;
+}
+
+.send {
+    text-align: center;
+}
+
+.reply {
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding-left: 0.5em;
+    left: 6px;
+}
+
+.forward {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding-right: 0.5em;
+    left: -6px;
+}
+
+@font-face {
+    font-family: 'mail';
+    src:url('fonts/mail.eot');
+    src:url('fonts/mail.eot?#iefix') format('embedded-opentype'),
+        url('fonts/mail.woff') format('woff'),
+        url('fonts/mail.ttf') format('truetype'),
+        url('fonts/mail.svg#mail') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon2-"], [class*=" icon2-"] {
+    font-family: 'mail';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon2-forward:before {
+    content: "\e600";
+}
+.icon2-reply-all:before {
+    content: "\e601";
+}
+.icon2-reply:before {
+    content: "\e602";
+}
+.icon2-cross:before {
+    content: "\e603";
+}
+
+// define animation
+
+.animated.moveUp {
+    animation-name: moveUp;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated.scaleDown {
+    animation-name: scaleDown;
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated.moveDown {
+    animation-name: moveDown;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
+
+.animated.scaleUp {
+    animation-name: scaleUp;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.02);
+    }
+}
