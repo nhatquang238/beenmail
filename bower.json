@@ -2,7 +2,11 @@
   "name": "beenmail2",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "animo.js": "~1.0.2",
+    "jquery.avgrund": "~1.2.0",
+    "sass-bootstrap": "~2.3.2",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {}
 }
