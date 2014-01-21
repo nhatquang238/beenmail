@@ -83,7 +83,7 @@ input.search-mail {
     }
 }
 
-.delete, .delete-message {
+.delete-conversation, .delete-message {
     position: absolute;
     display: none;
     opacity: 0.5;
@@ -92,12 +92,12 @@ input.search-mail {
     }
 }
 
-.delete {
+.delete-conversation {
     bottom: 35%;
     right: 5px;
 }
 
-.message-preview:hover .delete {
+.message-preview:hover .delete-conversation {
     display: block;
     cursor: pointer;
 }
@@ -156,20 +156,7 @@ input.search-mail {
     font-size: 1.2em;
     display: none;
     position: absolute;
-    bottom: 5px;
-    left: 37%;
-
-    & span {
-        padding: 0.2em 0.3em;
-        background: #ccc;
-        position: relative;
-        cursor: pointer;
-        transition: all 0.3s ease-out;
-    }
-    & span:hover {
-        background: $green-bs;
-        color: white;
-    }
+    left: 45%;
 }
 
 // New message
@@ -188,10 +175,17 @@ input.search-mail {
 }
 
 .reply {
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-    padding-left: 0.5em;
-    left: 6px;
+    border-radius: 1em;
+    padding: 0.3em 0.8em;
+    background: #ccc;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.reply:hover {
+    background: $green-bs;
+    color: white;
 }
 
 .forward {
@@ -226,12 +220,6 @@ input.search-mail {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon2-forward:before {
-    content: "\e600";
-}
-.icon2-reply-all:before {
-    content: "\e601";
-}
 .icon2-reply:before {
     content: "\e602";
 }

@@ -3,13 +3,27 @@
 (function ($) {
 	var $controlButton = $('.control-btn');
 
-	var deleteMail = function() {
-		var $message = $(this).parents('.message');
+	var	deleteAllMessages = function () {
+		$('.message').animo({animation: 'fadeOut', duration: 0.3}, function () {
+			$('.message').remove();
+		});
+	};
 
+	var deleteMail = function() {
+		var parent;
+		var $this = $(this);
+		console.log($this);
+		if ($this.attr('class').indexOf('delete-message') !== -1) {
+			parent = '.message';
+		} else if ($this.attr('class').indexOf('delete-conversation') !== -1) {
+			parent = '.message-preview';
+			deleteAllMessages();
+		}
+		var $parents = $this.parents(parent);
 		// fade the message out and move other messages up
-		$message.animo({animation: 'fadeOut', duration: 0.3}, function () {
-			$message.nextAll('.message').animo({animation: 'moveUp', duration: 0.3});
-			$message.remove();
+		$parents.animo({animation: 'fadeOut', duration: 0.3}, function () {
+			$parents.nextAll(parent).animo({animation: 'moveUp', duration: 0.3});
+			$parents.remove();
 		});
 	};
 
@@ -64,12 +78,27 @@
 
 	$('.new-mail, .forward').avgrund({
 		showClose: true,
-		template: newMailTemplate
+		template: newMailTemplate,
+		width: 600,
+		height: 400
 	});
+
+	var $messagePreview = $('.message-preview');
+	var changePreview = function (e) {
+		$messagePreview.removeClass('active');
+		var $this = $(this);
+		$this.addClass('active');
+		if ($this.attr('class').indexOf('new') !== -1) {
+			$this.removeClass('new');
+		}
+
+		$this = null;
+	};
 
 	// bind events
 	$('.messages').on('click', '.reply, .reply-all' , replyMail);
 	$('.messages').on('click', '.send-mail', sendMail);
 	$('.messages').on('click', '.delete-message', deleteMail);
-	// $('.messages').on('click', '.new-mail', newMail)
+	$('.preview').on('click', '.message-preview', changePreview);
+	$('.preview').on('click', '.delete-conversation', deleteMail);
 })(jQuery);

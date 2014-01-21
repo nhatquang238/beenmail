@@ -13,6 +13,7 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="bower_components/jquery.avgrund/style/avgrund.css">
         <link rel="stylesheet" href="bower_components/animo.js/animate+animo.css">
+        <link rel="stylesheet" href="bower_components/chosen-sass-bootstrap/chosen/chosen.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
@@ -37,26 +38,22 @@
                 <div class="span2 navish">navigatorish</div>
                 <div class="span8 beenmail">
                     <div class="span4 preview">
-                        <input type="text" class="search-mail" placeholder="Who do you want to email?">
+                        <input type="text" class="search-mail" placeholder="Search for conversation">
                         <div class="message-preview new">
                             <h3 class="name">Jeremy</h3>
-                            <span class="icon2-cross delete"></span>
-                            <!-- <p class="preview">Hey could you help me...</p> -->
+                            <span class="icon2-cross delete-conversation"></span>
                         </div>
                         <div class="message-preview active new">
                             <h3 class="name">Shinn, Ace</h3>
-                            <span class="icon2-cross delete"></span>
-                            <!-- <p class="preview">Hey could you help me...</p> -->
+                            <span class="icon2-cross delete-conversation"></span>
                         </div>
                         <div class="message-preview">
                             <h3 class="name">Shi Hua</h3>
-                            <span class="icon2-cross delete"></span>
-                            <!-- <p class="preview">Hey could you help me...</p> -->
+                            <span class="icon2-cross delete-conversation"></span>
                         </div>
                     </div>
                     <div class="span8 messages">
                         <div class="control-btn">
-                            <!-- <div class="btn btn-danger">Delete mail</div> -->
                             <div class="btn btn-primary new-mail">New mail</div>
                         </div>
                         <div class="message">
@@ -70,8 +67,6 @@
                             </div>
                             <div class="mail-action">
                                 <span class="icon2-reply reply"></span>
-                                <span class="icon2-reply-all reply-all"></span>
-                                <span class="icon2-forward forward"></span>
                             </div>
                         </div>
                         <div class="message">
@@ -85,8 +80,6 @@
                             </div>
                             <div class="mail-action">
                                 <span class="icon2-reply reply"></span>
-                                <span class="icon2-reply-all reply-all"></span>
-                                <span class="icon2-forward forward"></span>
                             </div>
                         </div>
                     </div>
@@ -95,6 +88,9 @@
             </div>
         </div>
 
+        <div class="new-email-form">
+
+        </div>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -102,6 +98,7 @@
         <script src="bower_components/animo.js/animo.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
         <script src="bower_components/jquery.avgrund/jquery.avgrund.min.js"></script>
+        <script src="bower_components/chosen-sass-bootstrap/chosen/chosen.jquery.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
