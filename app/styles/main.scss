@@ -47,10 +47,6 @@ input.search-mail {
         border-bottom: 1px solid #eee;
     }
 
-    &.active {
-        background: $green-bs;
-        color: #f2f2f2;
-    }
     &:not(.active):hover {
         background: #C2F3C2;
     }
@@ -63,6 +59,11 @@ input.search-mail {
     & p {
         margin-bottom: 1.2em;
     }
+}
+
+.active {
+    background: $green-bs !important;
+    color: #f2f2f2;
 }
 
 .new{
@@ -279,4 +280,59 @@ input.search-mail {
     100% {
         transform: scale(1.02);
     }
+}
+
+// new email form
+.new-email-form {
+    & h2 {
+        font-size: 1.618em;
+    }
+    & figure {
+        cursor: pointer;
+        width: 40%;
+        display: inline-block;
+        margin: 0 3em 1em 0;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 5px;
+        transition: all 0.3s ease-out;
+    }
+    & figure:hover {
+        background: #e3e3e3;
+    }
+    select {
+        width: 150px;
+        margin-right: 4.5em;
+    }
+}
+
+
+.people {
+    height: 400px;
+    overflow: scroll;
+    & h3 {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+}
+
+.new-email {
+    margin: 1em 0 0;
+}
+
+.admin-pic, .admin-name, .volunteer-pic, .volunteer-name {
+    float: left;
+}
+
+.admin-name, .volunteer-name {
+    margin-left: 1em;
+    margin-top: 1.8em;
+}
+
+.start-conversation {
+    margin-bottom: 10px;
+}
+
+.hide {
+    display: none !important;
 }

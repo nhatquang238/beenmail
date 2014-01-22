@@ -88,19 +88,91 @@
             </div>
         </div>
 
-        <div class="new-email-form">
-
-        </div>
-
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/animo.js/animo.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
-        <script src="bower_components/jquery.avgrund/jquery.avgrund.min.js"></script>
+        <script src="bower_components/jquery.avgrund/jquery.avgrund.js"></script>
         <script src="bower_components/chosen-sass-bootstrap/chosen/chosen.jquery.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
+
+        <script type="text/html" id="new-mail-template">
+            <div class="new-email-form">
+                <h2>Choose the people you want to talk to</h2>
+                <form class="new-email">
+                    <input type="search" placeholder="Looking for Mr/Mrs ...">
+                    <select name="organization" class="organization" id="">
+                        <option value="beach head">Beach Head</option>
+                        <option value="d-catalyst">D-Catalyst</option>
+                        <option value="d-design">D-Design</option>
+                    </select>
+                    <p class="btn btn-primary start-conversation">Start conversation</p>
+                </form>
+                <div class="people">
+                    <section class="admin-section">
+                        <h3>Administrators</h3>
+                        <div class="admins">
+                            <figure>
+                                <img class="admin-pic" src="images/admin1.png" alt="">
+                                <figcaption class="admin-name">Jessica Leong Meiting</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="admin-pic" src="images/admin2.png" alt="">
+                                <figcaption class="admin-name">Henry Dave McKinsen</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section class="volunteer-section">
+                        <h3>Volunteers</h3>
+                        <div class="volunteers">
+                            <figure>
+                                <img class="volunteer-pic" src="images/volunteer1.png" alt="">
+                                <figcaption class="volunteer-name">Ace</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="volunteer-pic" src="images/volunteer2.png" alt="">
+                                <figcaption class="volunteer-name">Phoon PS</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="volunteer-pic" src="images/volunteer3.png" alt="">
+                                <figcaption class="volunteer-name">Handsome guy</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="volunteer-pic" src="images/volunteer4.png" alt="">
+                                <figcaption class="volunteer-name">Angry guy</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="volunteer-pic" src="images/volunteer5.png" alt="">
+                                <figcaption class="volunteer-name">Ninja guy</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </script>
+
+        <script id="message-preview-template" type="text/html">
+            <div class="message-preview active">
+                <h3 class="name">
+                <% var colon;
+                if (receivers.length === 0) {
+                    colon = '';
+                } else {
+                    colon = ', ';
+                }
+                _.each(receivers, function (receiver) {
+                    if (receiver == receivers[receivers.length-1]) {
+                        colon = '';
+                    }
+                    %>
+                    <span><%= receiver + colon %></span>
+                <% }); %>
+                </h3>
+                <span class="icon2-cross delete-conversation"></span>
+            </div>
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
