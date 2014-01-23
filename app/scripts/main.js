@@ -122,9 +122,9 @@
 		});
 
 		// Only use 1st name
-		for (var i = receivers.length - 1; i >= 0; i--) {
-			receivers[i] = receivers[i].split(' ')[0];
-		};
+		// for (var i = receivers.length - 1; i >= 0; i--) {
+		// 	receivers[i] = receivers[i].split(' ')[0];
+		// };
 
 		// bounce new email form out
 		$('.new-email-form').animo({animation: 'bounceOutDown', duration: 0.5}, function () {

@@ -318,6 +318,9 @@ input.search-mail {
 
 .new-email {
     margin: 1em 0 0;
+    & .search {
+        width: 30em;
+    }
 }
 
 .admin-pic, .admin-name, .volunteer-pic, .volunteer-name {
