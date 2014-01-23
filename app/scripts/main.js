@@ -74,11 +74,9 @@
 		});
 	};
 
-	var $messagePreview = $('.message-preview');
-
 	// update read status behavior when clicked on conversations
 	var changePreview = function (e) {
-		$messagePreview.removeClass('active');
+		$('.message-preview').removeClass('active');
 		var $this = $(this);
 		$this.addClass('active');
 		if ($this.attr('class').indexOf('new') !== -1) {
@@ -159,9 +157,9 @@
 	$('.messages').on('click', '.reply, .reply-all' , replyMail);
 	$('.messages').on('click', '.send-mail', sendMail);
 	$('.messages').on('click', '.delete-message', deleteMail);
-	$('.preview').on('click', '.message-preview', changePreview);
 	$('.preview').on('click', '.delete-conversation', deleteMail);
 	$('.beenmail').on('click', 'figure', choosePerson);
 	$('.messages').on('click', '.new-mail', createNewMail);
 	$('.beenmail').on('click', '.start-conversation', startConversation);
+	$('.preview').on('click', '.message-preview', changePreview);
 })(jQuery);
