@@ -87,13 +87,8 @@
 
 	// update stage when choosing a person to talk
 	var choosePerson = function () {
-		var $this = $(this);
-		if ($this.hasClass('active')) {
-			$this.removeClass('active');
-		} else {
-			$this.addClass('active');
-		}
-		$this = null;
+		$('.new-email-form figure').removeClass('active');
+		$(this).addClass('active');
 	}
 
 	var newMailTemplate = _.template($('#new-mail-template').html());
