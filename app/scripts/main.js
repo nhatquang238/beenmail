@@ -75,7 +75,7 @@
 	};
 
 	// update read status behavior when clicked on conversations
-	var changePreview = function (e) {
+	var changePreview = function () {
 		$('.message-preview').removeClass('active');
 		var $this = $(this);
 		$this.addClass('active');
@@ -89,7 +89,7 @@
 	var choosePerson = function () {
 		$('.new-email-form figure').removeClass('active');
 		$(this).addClass('active');
-	}
+	};
 
 	var newMailTemplate = _.template($('#new-mail-template').html());
 
@@ -104,9 +104,9 @@
 
 		_.delay(function () {
 			$('.beenmail').prepend(newMailTemplate);
-			$('.new-email-form').animo({animation: 'bounceInUp', duration: 0.5})
+			$('.new-email-form').animo({animation: 'bounceInUp', duration: 0.5});
 		}, 300);
-	}
+	};
 
 	// get receivers, change back to normal conversation view and initiate a blank message
 	var startConversation = function () {
@@ -146,7 +146,7 @@
 
 			receivers = null;
 		}, 500);
-	}
+	};
 
 	// bind events
 	$('.messages').on('click', '.reply, .reply-all' , replyMail);
